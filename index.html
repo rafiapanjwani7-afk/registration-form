@@ -10,26 +10,35 @@
 
 <body>
     <div class="container">
-        <div class="login-form">
-            <h2>SMIT REGISTRATION FORM</h2>
+        <div class="registration-form">
+            <h2>Registration Form</h2>
             <form>
-                <label>Student Name:<input type="text" placeholder="enter your name" id="f-name"
-                        required></label><br><br>
-                <label>Father NAME:<input type="father name" name="fn" value="" placeholder="FATHER Name" id="L-name"
-                        required></label><br><br>
-                <label>Date OF BIRTH: <input type="date" name="DOB" id="DOB" required></label><br><br>
-                <label>MOBILE NO:<input type="tel" name="phone" placeholder="number"  id="mobile" required></label><br>
-                <label> CNIC: <input type="NUMBER" name="cnic" placeholder="CNIC number" id="f-cnic" required size="15"
-                        maxlength="15"></label><br>
-                <label>Email:<input id="email" type="email" placeholder="email" required> </label><br>
-
-                <button type="submit" id="submit" class="btn submit" onclick="">submit form</button>
-                <button type="reset" id="reset" class="btn reset" onclick="">reset form</button>
-                <p id="result"></p>
+                <label>STUDENT NAME: <input type="text" placeholder="enter your name" id="f-name"
+                        required></label><br>
+                <label>FATHER NAME: <input type="father name" name="fn" placeholder="Father Name" id="L-name"
+                        required></label><br>
+                <label>DATE OF BIRTH: <input type="date" name="DOB" id="DOB" required></label><br>
+                <label>MOBILE NUMBER: <input type="tel" name="phone" placeholder="number" id="mobile"
+                        required></label><br>
+                <label> CNIC NUMBER: <input type="NUMBER" name="cnic" placeholder="CNIC number" id="f-cnic" required
+                        size="15" maxlength="15"></label><br>
+                <label>EMAIL ADDRESS: <input id="email" type="email" placeholder="email" required> </label><br>
+                <button type="submit" id="submit" class="btn submit" onclick="submitForm()">Submit Form</button>
+                <button type="button" id="reset" class="btn reset" onclick="resetForm()">Reset form</button>
             </form>
         </div>
     </div>
+    <div class="card-section">
+    <div  id="userOutput" class="card">
+        <h2>Student Information</h2>
+        <p>Student Name: <span id="fullName"></span></p>
+        <p>Date Of Birth: <span id="Dob"></span> </p>
+        <p>Mobile Number: <span id="mobileNumber"></span></p>
+        <p>CNIC Number: <span id="cnicNumber"></span></p>
+        <p>Email Address: <span id="emailAddress"></span></p>
 
+    </div>
+</div>
     <script src="app.js"></script>
 </body>
 

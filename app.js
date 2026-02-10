@@ -1,28 +1,30 @@
-var firstName = document.getElementById("f-name");
-var LastName = document.getElementById("L-name");
-var dateOfBirth = document.getElementById("DOB");
-var mobile = document.getElementById("mobile");
-var cnic = document.getElementById("cnic")
-var email = document.getElementById("email")
-var email = document.getElementById("submit")
-var resetbtn=document.getElementById("reset");
+var firstName = document.getElementById("f-name").value;
+var LastName = document.getElementById("L-name").value;
+var dateOfBirth = document.getElementById("DOB").value;
+var mobile = document.getElementById("mobile").value;
+var cnic = document.getElementById("cnic");
+var email = document.getElementById("email").value;
+var submitBtn = document.getElementById("submit");
+var resetBtn = document.getElementById("reset");
 
-function output(){
- console.log("Student Name:"+firstName.value);
- document.getElementById(result).innerHTML ="Student Name:"+firstName.value
- console.log("father Name:"+LastName.value);
- console.log("date of birth"+ dateOfBirth.value);
- console.log("mobile Number:"+mobile.value);
- console.log("cnic:"+cnic.value);
- console.log("email:"+email.value);
+function userOutput() {
+   document.getElementById("fullName").innerHTML = firstName+ " " + LastName;
+   document.getElementById("Dob").innerHTML = dateOfBirth;
+   document.getElementById("mobileNumber").innerHTML = mobile;
+   document.getElementById("cnicNumber").innerHTML = cnic;
+   document.getElementById("emailAddress").innerHTML = email;
+   
 }
-
-function resetbtn(){
-    firstName.value === "" 
-    LastName.value === " " 
-    dateOfBirth.value === " " 
-    mobile.value === " " 
-    cnic.value === " "
-    email.value === " "
+function resetForm() {
+   firstName.value = ""
+   LastName.value = ""
+   dateOfBirth.value = ""
+   mobile.value = ""
+   cnic.value = ""
+   email.value = ""
+   
 }
-
+function submitForm() {
+   userOutput();
+   resetForm();
+}
