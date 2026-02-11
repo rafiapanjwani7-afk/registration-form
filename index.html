@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,24 +17,25 @@
                 <label>FATHER NAME: <input type="father name" name="fn" placeholder="Father Name" id="L-name"
                         required></label><br>
                 <label>DATE OF BIRTH: <input type="date" name="DOB" id="DOB" required></label><br>
-                <label>MOBILE NUMBER: <input type="tel" name="phone" placeholder="number" id="mobile"
+                <label>MOBILE NUMBER: <input type="number" name="phone" placeholder="number" id="mobile"
                         required></label><br>
                 <label> CNIC NUMBER: <input type="NUMBER" name="cnic" placeholder="CNIC number" id="f-cnic" required
                         size="15" maxlength="15"></label><br>
                 <label>EMAIL ADDRESS: <input id="email" type="email" placeholder="email" required> </label><br>
                 <button type="submit" id="submit" class="btn submit" onclick="submitForm()">Submit Form</button>
-                <button type="button" id="reset" class="btn reset" onclick="resetForm()">Reset form</button>
+                <button type="button" id="preview" class="btn reset" onclick="previewForm()">Preview form</button>
             </form>
+            <div id="message" class="success"></div>
         </div>
     </div>
     <div class="card-section">
-    <div  id="userOutput" class="card">
-        <h2>Student Information</h2>
-        <p>Student Name: <span id="fullName"></span></p>
-        <p>Date Of Birth: <span id="Dob"></span> </p>
-        <p>Mobile Number: <span id="mobileNumber"></span></p>
-        <p>CNIC Number: <span id="cnicNumber"></span></p>
-        <p>Email Address: <span id="emailAddress"></span></p>
+    <div  id="previewCard" class="card">
+        <h2>Preview Information</h2>
+        <p id="fullName"> </p>
+        <p id="Dob"></p>
+        <p id="mobileNumber"></p>
+        <p id="cnicNumber"></p>
+        <p id="emailAddress"></p>
 
     </div>
 </div>
